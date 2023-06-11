@@ -10,6 +10,8 @@ main{
     border: 2px solid black;
     width: 600px;
     height: 600px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #prompt{
@@ -18,3 +20,7 @@ main{
     width: 400px;
 }
 
+.grid{
+    flex: 1;
+    flex-basis: calc(100% / 16);
+}
