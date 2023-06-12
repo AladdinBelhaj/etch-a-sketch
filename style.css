@@ -23,4 +23,10 @@ main{
 .grid{
     flex: 1;
     flex-basis: calc(100% / 16);
+    outline: 1px black solid;
 }
+
+
+
+
+
