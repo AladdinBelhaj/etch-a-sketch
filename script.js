@@ -2,6 +2,13 @@
     var container = document.getElementById('container');
     var slider = document.getElementById('myRange');
     var output = document.querySelector('span');
+    var colorPicker = document.getElementById("color-picker");
+    var color;
+
+    colorPicker.addEventListener('input', function() {
+        color = this.value;
+    });
+
 
     output.innerHTML = `${slider.value}x${slider.value}`; 
     slider.oninput = function(){
@@ -17,7 +24,7 @@
             let divs = document.querySelectorAll('.grid');
             divs.forEach(div=>{
                 div.addEventListener('mouseover', function(){
-                    div.style.backgroundColor = "red";
+                    div.style.backgroundColor = color;
                 });
             })
      }
@@ -31,10 +38,12 @@
             let divs = document.querySelectorAll('.grid');
             divs.forEach(div=>{
                 div.addEventListener('mouseover', function(){
-                    div.style.backgroundColor = "red";
+                    div.style.backgroundColor = color;
                 });
             })
         }
+
+
 
 
 
